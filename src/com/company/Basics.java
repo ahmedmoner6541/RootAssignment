@@ -1,19 +1,27 @@
-package com.company.basicsifcondtask;
+package com.company;
 
 import java.util.Scanner;
 
 public class Basics {
 
+<<<<<<< HEAD:src/com/company/basicsifcondtask/Basics.java
 
 
     public static void main(String[] args) {
 
 
 
+=======
+
+
+    public static void main(String[] args) {
+        areaOfCircle();
+
+        /*
+>>>>>>> 15f8458 (first):src/com/company/Basics.java
         // question 1
         System.out.println(getNameMonthByNum());
 
-       /*
        // question 2
         System.out.println(getSeasonByMonth(6));
 
@@ -113,7 +121,7 @@ public class Basics {
         if (month == 12 || month == 1 || month == 2) {
             nameOfSeason = "winter ";
         }
-        return "the month number " + month + "come in " + nameOfSeason;
+        return "the month number " + month + " is " + nameOfSeason;
     }
 
     public static String getCharVowel() {
@@ -303,7 +311,6 @@ public class Basics {
         int[] arr = new int[]{1, 3, 6, -1, -3, -6};
 
         for (int i = 0; i < arr.length; i++) {
-
             if (arr[i] < 0)
                 sumnegative = sumnegative + arr[i];
 
