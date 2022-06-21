@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Basics {
 
+
+
     public static void main(String[] args) {
+
 
 
         // question 1
@@ -128,15 +131,11 @@ public class Basics {
     }
 
     public static String simpleCalculator() {
-
         Scanner input = new Scanner(System.in);
-
         System.out.println("enter first number : ");
         int firstNum = input.nextInt();
-
         System.out.println("enter secound number : ");
         int secoundNum = input.nextInt();
-
         System.out.println("enter operation same as  /  *  -  + ");
         char operation = input.next().charAt(0);
         int resutl = 0;
@@ -177,12 +176,10 @@ public class Basics {
         Scanner sc = new Scanner(System.in);
         int mark = Integer.parseInt(sc.nextLine());
         String result = "";
-
         switch ((0 <= mark && mark < 40) ? 0 :
                 (40 <= mark && mark < 60) ? 1 :
                         (60 <= mark && mark < 80) ? 2 :
                                 (80 <= mark) ? 3 : 4) {
-
             case 0:
                 result = "f";
                 break;
@@ -203,7 +200,8 @@ public class Basics {
 
     }
 
-    public static void wotermelonn() {
+//7//
+ public static void wotermelonn() {
         System.out.println("enter your watermelon kilos");
         Scanner sc = new Scanner(System.in);
         int kilo = sc.nextInt();
@@ -266,6 +264,7 @@ public class Basics {
     }
 
     public static void sortingThreeFloatingNumbersterminalOperator() {
+
         float num1, num2, num3;
         Scanner input = new Scanner(System.in);
         System.out.println("enter first num ");
