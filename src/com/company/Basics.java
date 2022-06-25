@@ -4,21 +4,12 @@ import java.util.Scanner;
 
 public class Basics {
 
-<<<<<<< HEAD:src/com/company/basicsifcondtask/Basics.java
-
-
-    public static void main(String[] args) {
-
-
-
-=======
 
 
     public static void main(String[] args) {
         areaOfCircle();
 
         /*
->>>>>>> 15f8458 (first):src/com/company/Basics.java
         // question 1
         System.out.println(getNameMonthByNum());
 
