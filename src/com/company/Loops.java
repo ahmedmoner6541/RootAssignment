@@ -19,10 +19,9 @@ public class Loops {
         getManyDigitInthisNumber();
         howManyTimesCanWeDivideItByTweo(50);
         numbersAreDivisableByFiveOrSix();
-  */
+   numbersAreDivisableByFiveOrSix();
+  */     getManyDigitInthisNumber();
     }
-
-
     private static void getNumbersDivisibleByFive() {
         for (int i = 0; i < 100; i += 5) {
             System.out.print(i + " ");
@@ -42,6 +41,8 @@ public class Loops {
     }
 
     private static void getPower(int base, int power) {
+
+
         int resu = 1;
         for (int i = 1; i < power + 1; i++) {
             resu = resu * base;
@@ -51,7 +52,7 @@ public class Loops {
 
     private static void getFactorial(int factorial) {
         int result = 1;
-        for (int i = 1; i <= factorial; i++) {
+        for (int i = 1; i <= 5; i++) {
             result = result * i;
         }
         System.out.println(result);
@@ -104,6 +105,9 @@ public class Loops {
 //        System.out.println(123%10 + "||"+123/10);//for sum <-// 3 || 12 ->for condition
 //        System.out.println(12%10 + "||"+12/10);              // 2 || 1
 //        System.out.println(1%10 + "||"+1/10);                // 1 || 0
+
+
+
         int sum;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter any  number: ");
@@ -127,12 +131,11 @@ public class Loops {
 
     private static void howManyTimesCanWeDivideItByTweo(int number) {
         int sum = 0;
-        int i = 1;
-        for (i = number; i > 0; i--) {
-            i /= 2.0;
+        int i = 0;
+        for (i = 20; i > 0; i--) {
+            i /= 2;
             sum++;
-            System.out.println("divide number " + sum + " = " + i);
-        }
+         }
         System.out.println("sum of divide is = " + sum);
 
     }
@@ -141,7 +144,7 @@ public class Loops {
 
         for (int i = 100; i < 200; i++) {
             if (i % 6 == 0 && i % 5 != 0 || i % 5 == 0 && i % 6 != 0) {
-                System.out.println(i);
+                System.out.print(i);
             }
         }
     }

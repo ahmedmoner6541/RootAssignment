@@ -1,24 +1,31 @@
 package com.company;
 
+import com.company.oop.assignmentOne.Movie;
+
 public class Arrays {
 
     public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 1, 3, 5, 9, 2};
+        int[] arr2 = {1, 2, 3, 4, 5, 13, 88, 99, 778};
 
+        //
+        getArraySortedByBuubleSort(arr);
+       // System.out.println(linearSearch(arr2, 88));
+        /*
+            getArraySortedBySelectionSort();
 
-
-     /*
-      System.out.println(getSummition(arr));
+          getSortsArray();
+         System.out.println(getSummition(arr));
       System.out.println(getNumOfElements(arr));
       System.out.println(getMax(arr));
       System.out.println(getMin(arr));
       System.out.println(getCalculateEvenNumbers(arr));
       System.out.println(count2(arr));;
       countGeneral();
-
+ getSortsArray();
 
      // binary search   selection sort  binary search and linear search
 */
-        getSortsArray();
     }
 
 
@@ -64,7 +71,7 @@ public class Arrays {
                 sumEvenNumber++;
             }
         }
-        System.out.println("evenn number is = " + sumEvenNumber);
+        System.out.println("even number is = " + sumEvenNumber + " numbers ");
         return "sum even numbers is = " + sum;
     }
 
@@ -98,26 +105,73 @@ public class Arrays {
         }
     }
 
-    private static void getSortsArray() {
-        int[] arr = {1, 2, 83, 31, 3, 6};
+    private static void getArraySortedBySelectionSort(int[] arr) {
+///int[] arr = {2, 4, 6, 1, 3, 5, 9, 2};
         int temp = 0;
-        for (int i = 0; i <arr.length; i++) {
-            // ال i+1  لكي يتجاهل كل قيمه في اول المصفوفه والتي رتبها من فلا يحتاج  فحصها مجددا
-            for (int j = i+1; j <arr.length; j++) {
-                if(arr[i] > arr[j]) { //لو القيمه اللوب الداخليه arr[j] اقل من  باقي اللوب الخارجيه arr[i]
-                    temp = arr[i];  //  اجعل اقل عنصر(temp )  تساوب العنصر الحالي وهو الاقل
+        for (int i = 0; i < arr.length; i++) {
+            // ال i+1  لكي يتجاهل كل قيمه في اول المصفوفه والتي رتبها من قبل فلا يحتاج  فحصها مجددا
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) { //لو القيمه اللوب الداخليه arr[j] اقل من  باقي اللوب الخارجيه arr[i]
+                    temp = arr[i];  //  اجعل اقل عنصر(temp )  تساوي العنصر الحالي وهو الاقل
                     arr[i] = arr[j];//بدل العنصصر الجديد والاقل بالعنصر الحالي
                     arr[j] = temp; //  واجل الحالي والاقل  هو البدايه والتي تزيد كل مره في السطر(107)
                 }
             }
         }
         //print sorted array
-        for (int i = 0; i <arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-
-
     }
+
+
+    private static void getArraySortedByBuubleSort(int[] arr) {
+//  {2, 4, 6, 1, 3, 5, 9, 2};
+        for (int j = 0; j < arr.length - 1; j++) {
+            for (int i = 0; i < arr.length - 1 - j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    swipe(arr, i, i + 1);
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+        }
+    }
+
+    public static int binarySearch(int[] arr, int key) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == key) {
+                return mid;
+            } else if (key < arr[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+    public static int linearSearch(int[] arr, int key) {
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == key) {
+                return i;
+            }
+        }
+        return 1;
+    }
+
+
+    public static void swipe(int[] arr, int old, int neW) {
+        int temp = arr[old]; //  احفظ قيمه القديمه
+        arr[old] = arr[neW]; // ضيف القيمه الجديده مكان القديمه
+        arr[neW] = temp;     //  ضيف القيمه القديمه مكان الجديده
+    }
+
 
 
 }
